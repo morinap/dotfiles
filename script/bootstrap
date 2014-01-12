@@ -141,6 +141,7 @@ setup_gitconfig
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
+# Also install oh-my-zsh if it's not already there
 if [ "$(uname -s)" == "Darwin" ]
 then
   info "installing dependencies"
@@ -149,6 +150,15 @@ then
     success "dependencies installed"
   else
     fail "error installing dependencies"
+  fi
+
+  # Oh my zsh
+  if ! [ -d ~/.oh-my-zsh ]
+  then
+    info 'install oh-my-zsh'
+
+    curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+    success 'oh-my-zsh'
   fi
 fi
 
