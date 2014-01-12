@@ -1,0 +1,3 @@
+[
+	{ "keys": ["super+option+w"], "command": "close_all" },
+]
