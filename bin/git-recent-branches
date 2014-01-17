@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+MAX_COUNT=10
+if [ $# -eq 1 ]; then
+	MAX_COUNT=$1
+fi
+
+git for-each-ref --sort=-committerdate refs/heads/ | head -n $MAX_COUNT | awk -F/ '{print $NF}'
