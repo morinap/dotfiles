@@ -1,4 +1,10 @@
 syntax on
 
+set number
+set listchars=tab:▸\ ,eol:¬
+set list!
+set ruler
+set visualbell
+
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
