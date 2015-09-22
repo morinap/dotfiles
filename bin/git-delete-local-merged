@@ -4,5 +4,18 @@
 # our favorite @tekkub:
 #
 #   https://plus.google.com/115587336092124934674/posts/dXsagsvLakJ
+#
+# Modifed by @morinap To add confirmation, and also checking merged state based on current branch
 
-git branch -d `git branch --merged | grep -v '^*' | grep -v 'master' | tr -d '\n'`
+CURRENT=`git rev-parse --abbrev-ref HEAD`
+for BRANCH in `git branch --merged $CURRENT | grep -v '^*' | grep -v $CURRENT`
+do
+	read -r -p "Delete $BRANCH? [y/N] " response
+	if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]
+	then
+		git branch -d "$BRANCH"
+	else
+		echo Skipping "$BRANCH"
+	fi
+done
+
