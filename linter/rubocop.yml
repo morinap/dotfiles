@@ -1,0 +1,19 @@
+inherit_from: /usr/local/lib/ruby/gems/2.2.0/gems/rubocop-0.34.2/config/default.yml
+
+LineLength:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+
+Style/EmptyLinesAroundMethodBody:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
