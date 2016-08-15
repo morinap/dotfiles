@@ -1,19 +1,196 @@
-inherit_from: /usr/local/lib/ruby/gems/2.2.0/gems/rubocop-0.34.2/config/default.yml
+inherit_from: /Library/Ruby/Gems/2.0.0/gems/rubocop-0.40.0/config/default.yml
 
-LineLength:
+# LineLength:
+#   Enabled: false
+
+# Style/EmptyLinesAroundClassBody:
+#   Enabled: false
+
+# Style/EmptyLinesAroundBlockBody:
+#   Enabled: false
+
+# Style/EmptyLinesAroundMethodBody:
+#   Enabled: false
+
+# Style/EmptyLinesAroundModuleBody:
+#   Enabled: false
+
+# Style/NegatedIf:
+#   Enabled: false
+
+# Style/AccessorMethodName:
+#   Enabed: false
+
+# Style/StringLiterals:
+#   Enabled: false
+
+# Style/IfUnlessModifier:
+#   Enabled: false
+
+# Metrics/AbcSize:
+#   Enabled: false
+
+# Style/HashSyntax:
+#   Enabled: false
+
+
+
+# AllCops:
+  # Include:
+  #   - 'lib/**/*.rb'
+  #   - 'models/**/*.rb'
+  #   - 'app/**/*.rb'
+  # Exclude:
+  #   - 'dev/**/*'
+  #   - 'vendor/**/*'
+  #   - 'test/factories/**/*'
+  #   - 'script/archive/**/*'
+  #   - 'Gemfile'
+  #   - 'Gemfile.lock'
+  #   - 'app/controllers/analytics_demo.rb'
+
+Style/Encoding:
   Enabled: false
 
-Style/EmptyLinesAroundClassBody:
-  Enabled: false
-
-Style/EmptyLinesAroundBlockBody:
-  Enabled: false
-
-Style/EmptyLinesAroundMethodBody:
-  Enabled: false
-
-Style/NegatedIf:
+#
+# Max number of characters per line
+#
+Metrics/LineLength:
+  Max: 300
   Enabled: false
 
 Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max: 25
+
+
+Style/BracesAroundHashParameters:
   Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
+
+Style/Semicolon:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Max: 20
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
+
+Lint/Loop:
+  Enabled: false
+
+Style/TrivialAccessors:
+  Enabled: false
+
+Style/For:
+  Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Style/ClassVars:
+  Enabled: false
+
+
+Style/AlignHash:
+  Enabled: false
+
+Style/EmptyLineBetweenDefs:
+  Enabled: false
+
+Style/SpaceAroundEqualsInParameterDefault:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+Style/SpaceInsideBlockBraces:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/AccessorMethodName:
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+Style/TrailingBlankLines:
+  Enabled: false
+
+Style/SpaceAfterComma:
+  Enabled: false
+
+Style/RedundantReturn:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+Style/Next:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/RaiseArgs:
+  Enabled: false
+
+Style/SelfAssignment:
+  Enabled: false
+
+
+Style/CommentAnnotation:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+#
+# Max number of lines in
+#
+Metrics/MethodLength:
+  Max: 150
+  Enabled: false
+
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+
+Style/EmptyLines: 
+  Enabled: false
+
+Metrics/BlockNesting:
+  Max: 6
+

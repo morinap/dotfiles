@@ -5,7 +5,7 @@
         "error_color": "D02000",
         "gutter_theme": "Packages/SublimeLinter/gutter-themes/ProjectIcons/ProjectIcons.gutter-theme",
         "gutter_theme_excludes": [],
-        "lint_mode": "background",
+        "lint_mode": "load/save",
         "linters": {
             "htmltidy": {
                 "@disable": false,
@@ -30,7 +30,10 @@
             },
             "rubocop": {
                 "@disable": false,
-                "args": [],
+                "args": [
+                    "--config",
+                    "/Users/Thunderbird/anmorin/.rubocop.yml"
+                ],
                 "excludes": []
             },
             "scalac": {
