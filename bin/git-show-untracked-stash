@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Usage: git-show-untracked-stash <stash name>
+#
+# Shows the untracked files in a stash
+
+set -e
+
+# Untracked files are stored int eh third parent of a stash commit. Because of course?
+git show $1^3
