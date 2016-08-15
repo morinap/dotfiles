@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Get the lines from a bit of source code that are non-blank and do not start with a comment character
+#
+
+FILENAME=$1
+
+egrep -v "^\s*(#|//|$)" $FILENAME
