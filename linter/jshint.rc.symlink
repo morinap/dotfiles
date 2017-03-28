@@ -1,0 +1,6 @@
+{
+	"esnext": "true",
+	"undef": "true",
+	"unused": "true",
+	"predef": ["Backbone", "$", "_", "define", "require", "CKEDITOR", "console", "arguments", "window", "document", "chrome", "localStorage", "process", "module", "exports", "base_url"]
+}

@@ -1,77 +1,142 @@
 {
-    "user": {
-        "debug": false,
-        "delay": 0.25,
-        "error_color": "D02000",
-        "gutter_theme": "Packages/SublimeLinter/gutter-themes/ProjectIcons/ProjectIcons.gutter-theme",
-        "gutter_theme_excludes": [],
-        "lint_mode": "load/save",
-        "linters": {
-            "htmltidy": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "javac": {
-                "@disable": false,
-                "args": [],
-                "excludes": [],
-                "lint": ""
-            },
-            "jshint": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "php": {
-                "@disable": false,
-                "args": [],
-                "excludes": []
-            },
-            "rubocop": {
-                "@disable": false,
-                "args": [
-                    "--config",
-                    "/Users/Thunderbird/anmorin/.rubocop.yml"
-                ],
-                "excludes": []
-            },
-            "scalac": {
-                "@disable": false,
-                "args": [],
-                "classpath": "/Users/Thunderbird/anmorin/dev/task_scheduling_service/target/scala-2.10/classes:/Users/Thunderbird/anmorin/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.10.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-json_2.10/jars/play-json_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/jars/play-iteratees_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.scala-stm/scala-stm_2.10/jars/scala-stm_2.10-0.7.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-functional_2.10/jars/play-functional_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/jars/play-datacommons_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.6.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.3.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.3.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.3.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.4.jar:/Users/Thunderbird/anmorin/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.37.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.apache.commons/commons-dbcp2/jars/commons-dbcp2-2.0.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.apache.commons/commons-pool2/jars/commons-pool2-2.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.surftools/BeanstalkClient/jars/BeanstalkClient-1.4.6.jar:/Users/Thunderbird/anmorin/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.7.jar:/Users/Thunderbird/anmorin/.ivy2/cache/biz.paluch.logging/logstash-gelf/jars/logstash-gelf-1.6.0.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.googlecode.json-simple/json-simple/bundles/json-simple-1.1.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/junit/junit/jars/junit-4.10.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/redis.clients/jedis/jars/jedis-2.6.1.jar",
-                "classpath_filename": "",
-                "excludes": [],
-                "lint": "",
-                "target_directory": "{$project}/target/linter-classes/"
-            }
-        },
-        "mark_style": "outline",
-        "no_column_highlights_line": false,
-        "passive_warnings": false,
-        "paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
-        },
-        "python_paths": {
-            "linux": [],
-            "osx": [],
-            "windows": []
-        },
-        "rc_search_limit": 3,
-        "shell_timeout": 10,
-        "show_errors_on_save": false,
-        "show_marks_in_minimap": true,
-        "syntax_map": {
-            "html (django)": "html",
-            "html (rails)": "html",
-            "html 5": "html",
-            "javascript (babel)": "javascript",
-            "php": "html",
-            "python django": "python"
-        },
-        "warning_color": "DDB700",
-        "wrap_find": true
-    }
+	"user":
+	{
+		"debug": false,
+		"delay": 0.25,
+		"error_color": "D02000",
+		"gutter_theme": "Packages/SublimeLinter/gutter-themes/ProjectIcons/ProjectIcons.gutter-theme",
+		"gutter_theme_excludes":
+		[
+		],
+		"lint_mode": "load/save",
+		"linters":
+		{
+			"eslint":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"htmltidy":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"javac":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"lint": ""
+			},
+			"jshint":
+			{
+				"@disable": false,
+				"args":
+				[
+					"--config",
+					"/Users/Thunderbird/anmorin/.jshint.rc"
+				],
+				"excludes":
+				[
+					"*.jsx"
+				]
+			},
+			"php":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"rubocop":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				]
+			},
+			"scalac":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"classpath": "/Users/Thunderbird/anmorin/dev/task_scheduling_service/target/scala-2.10/classes:/Users/Thunderbird/anmorin/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.akka/akka-actor_2.10/jars/akka-actor_2.10-2.3.10.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-json_2.10/jars/play-json_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-iteratees_2.10/jars/play-iteratees_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.scala-stm/scala-stm_2.10/jars/scala-stm_2.10-0.7.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-functional_2.10/jars/play-functional_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.typesafe.play/play-datacommons_2.10/jars/play-datacommons_2.10-2.3.8.jar:/Users/Thunderbird/anmorin/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.6.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.3.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.3.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.3.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.4.jar:/Users/Thunderbird/anmorin/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-5.1.37.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.apache.commons/commons-dbcp2/jars/commons-dbcp2-2.0.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.apache.commons/commons-pool2/jars/commons-pool2-2.2.jar:/Users/Thunderbird/anmorin/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.1.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.surftools/BeanstalkClient/jars/BeanstalkClient-1.4.6.jar:/Users/Thunderbird/anmorin/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.1.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.1.3.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.7.jar:/Users/Thunderbird/anmorin/.ivy2/cache/biz.paluch.logging/logstash-gelf/jars/logstash-gelf-1.6.0.jar:/Users/Thunderbird/anmorin/.ivy2/cache/com.googlecode.json-simple/json-simple/bundles/json-simple-1.1.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/junit/junit/jars/junit-4.10.jar:/Users/Thunderbird/anmorin/.ivy2/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.1.jar:/Users/Thunderbird/anmorin/.ivy2/cache/redis.clients/jedis/jars/jedis-2.6.1.jar",
+				"classpath_filename": "",
+				"excludes":
+				[
+				],
+				"lint": "",
+				"target_directory": "{$project}/target/linter-classes/"
+			}
+		},
+		"mark_style": "outline",
+		"no_column_highlights_line": false,
+		"passive_warnings": false,
+		"paths":
+		{
+			"linux":
+			[
+			],
+			"osx":
+			[
+			],
+			"windows":
+			[
+			]
+		},
+		"python_paths":
+		{
+			"linux":
+			[
+			],
+			"osx":
+			[
+			],
+			"windows":
+			[
+			]
+		},
+		"rc_search_limit": 3,
+		"shell_timeout": 10,
+		"show_errors_on_save": false,
+		"show_marks_in_minimap": true,
+		"syntax_map":
+		{
+			"html (django)": "html",
+			"html (rails)": "html",
+			"html 5": "html",
+			"javascript (babel)": "javascript",
+			"php": "html",
+			"python django": "python"
+		},
+		"tooltip_fontsize": "1rem",
+		"tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+		"tooltip_theme_excludes":
+		[
+		],
+		"tooltips": true,
+		"warning_color": "DDB700",
+		"wrap_find": true
+	}
 }

@@ -17,10 +17,14 @@
 	"ignored_packages":
 	[
 		".DS_Store",
+		"Babel",
 		"Git",
 		"Markdown",
+		"ReactJS",
 		"SublimeCodeIntel",
-		"Vintage"
+		"Unicode Character Highlighter",
+		"Vintage",
+		"WakaTime"
 	],
 	"line_padding_bottom": 1.75,
 	"line_padding_top": 1.75,
