@@ -4,7 +4,8 @@
 	"auto_complete_delay": 10,
 	"bold_folder_labels": true,
 	"caret_style": "blink",
-	"color_scheme": "Packages/User/SublimeLinter/Monokai Soda (SL).tmTheme",
+	"color_inactive_tabs": true,
+	"color_scheme": "Packages/Agila Theme/Agila Monokai Extended.tmTheme",
 	"detect_indentation": true,
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
@@ -17,18 +18,21 @@
 	"ignored_packages":
 	[
 		".DS_Store",
-		"Babel",
 		"Git",
 		"Markdown",
 		"ReactJS",
 		"SublimeCodeIntel",
 		"Unicode Character Highlighter",
-		"Vintage",
-		"WakaTime"
+		"Vintage"
 	],
 	"line_padding_bottom": 1.75,
 	"line_padding_top": 1.75,
-	"match_brackets_angle": true,
+	"match_brackets": false,
+	"match_brackets_angle": false,
+	"match_brackets_braces": false,
+	"match_brackets_content": false,
+	"match_brackets_square": false,
+	"match_tags": false,
 	"reveal-on-activate": true,
 	"rulers":
 	[
@@ -38,9 +42,11 @@
 	"scroll_speed": 1.5,
 	"show_full_path": true,
 	"show_tab_close_buttons": true,
+	"status_bar_brighter": true,
 	"tab_completion": true,
 	"tab_size": 4,
-	"theme": "Soda Dark.sublime-theme",
+	"tabs_small": true,
+	"theme": "Afterglow.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"use_simple_full_screen": true,
 	"use_tab_stops": true,

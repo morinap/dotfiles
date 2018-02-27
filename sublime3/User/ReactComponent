@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+
+class ${1:componentName} extends Component {
+
+  render() {
+    return (
+    );
+  }
+}
+
+${1:componentName}.propTypes = {
+};
+
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapStateToDispatch = {
+};
+
+export default connect(mapStateToProps, mapStateToDispatch)(${1:componentName});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>reactcomp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+	<description>React Component Template</description>
+</snippet>

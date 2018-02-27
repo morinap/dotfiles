@@ -1,7 +1,4 @@
 {
 	"email": "andrew@andrewmorin.com",
-	"product_key": "",
-	"git_executables": {
-        "git": ["/usr/local/bin/git"],
-    }
+	"product_key": ""
 }
