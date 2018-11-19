@@ -1,10 +1,60 @@
 syntax on
 
+" Ensure vplug is enabled
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" Install useful plugins
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'           " Status line plugin
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'               " Tree browser
+Plug 'tpope/vim-surround'
+Plug 'kien/ctrlp.vim'                    " Fuzzy file opener
+Plug 'morhetz/gruvbox'                   " Good theme
+Plug 'osyo-manga/vim-over'               " Substitution preview
+Plug 'bronson/vim-trailing-whitespace'   " Highlight trailing whitespace
+call plug#end()
+
+" UI Settings
+colorscheme gruvbox
+set background=dark
+"set relativenumber
 set number
-set listchars=tab:▸\ ,eol:¬
-set list!
+set colorcolumn=100
 set ruler
 set visualbell
+set guifont=Inconsolata\ for\ Powerline:h11
+
+" Tab, indent, and whitespace settings
+set encoding=utf-8
+set smartindent
+set expandtab
+set listchars=tab:▸\ ,eol:¬
+set list!
+set nowrap
+set tabstop=2 shiftwidth=2
+set backspace=indent,eol,start
+
+"" Searching
+set hlsearch                    " highlight matches
+set incsearch                   " incremental searching
+set ignorecase                  " searches are case insensitive...
+set smartcase                   " ... unless they contain at least one capital let
+set laststatus=2
+
+" Airline
+let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled=1
+
+" NerdTree
+"autocmd vimenter * NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
