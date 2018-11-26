@@ -1,42 +1,40 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'puma/puma'
 
-brew 'ack'
+# Some core stuff
 brew 'coreutils'
-brew 'go'
-brew 'grc'
-brew 'imagemagick'
-brew 'jp2a'
-brew 'jq'
-brew 'libcaca', args: ['with-imlib2']
-brew 'libgit2'
+brew 'automake'
+brew 'autoconf'
 brew 'openssl'
-brew 'node'
+brew 'libyaml'
 brew 'readline'
-brew 'postgresql'
-brew 'puma/puma/puma-dev'
-brew 'ruby-build'
-brew 'rbenv'
-brew 'roundup'
-brew 'spaceman-diff'
-brew 'spark'
-brew 'unrar'
-brew 'wget'
-brew 'yarn'
-brew 'youtube-dl'
+brew 'libxslt'
+brew 'libtool'
+brew 'unixodbc'
+brew 'gettext'
 
-cask '1password'
-cask 'adium'
-cask 'firefox'
-cask 'garmin-express'
-cask 'google-chrome'
-cask 'handbrake'
-cask 'mapbox-studio'
-cask 'seashore'
-cask 'slack'
-cask 'steam'
-cask 'transmission'
-cask 'tunnelbear'
-cask 'vlc'
+# Perl, because yes
+brew 'pcre'
+brew 'perl'
+
+# Git helpers
+brew 'git-flow'
+cask 'fastlane'
+
+# System Helpers
+brew 'mtr'
+brew 'nmap'
+brew 'postgres-xc'
+
+# Other Utilities
+brew 'haproxy'
+brew 'macvim'
+cask 'kdiff3'
+cask 'ngrok'
+
+# Shell utilities
+brew 'the_silver_searcher'
+brew 'thefuck'
+brew 'zsh'
+brew 'zsh-completions'
