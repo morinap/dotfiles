@@ -1,0 +1,27 @@
+# shortcut to this dotfiles path is $ZSH
+export ZSH_DOTFILES=$HOME/.dotfiles
+
+# your project folder that we can `c [tab]` to
+export PROJECTS=~/Code
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# Load any path files
+for file in `find $ZSH_DOTFILES -name path.bash`
+do
+	source $file
+done
+
+# Load other bash files
+for file in `find $ZSH_DOTFILES -name "*.bash"`
+do
+	if [[ ! $file =~ path.bash$ ]]; then
+		source $file
+	fi
+done
+
