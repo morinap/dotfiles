@@ -13,10 +13,14 @@ Plug 'vim-airline/vim-airline'           " Status line plugin
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'               " Tree browser
 Plug 'tpope/vim-surround'
-Plug 'kien/ctrlp.vim'                    " Fuzzy file opener
+Plug 'ctrlpvim/ctrlp.vim'                " Fuzzy file opener
 Plug 'morhetz/gruvbox'                   " Good theme
 Plug 'osyo-manga/vim-over'               " Substitution preview
+Plug 'tpope/vim-fugitive'                " Git integration
 Plug 'bronson/vim-trailing-whitespace'   " Highlight trailing whitespace
+Plug 'mileszs/ack.vim'                   " Search within vim
+Plug 'airblade/vim-gitgutter'            " Git Gutter
+Plug 'wakatime/vim-wakatime'             " WakaTime
 call plug#end()
 
 " UI Settings
@@ -28,12 +32,26 @@ set colorcolumn=100
 set ruler
 set visualbell
 set guifont=Inconsolata\ for\ Powerline:h11
+"set clipboard=unnamed " Enable OS X clipboard integration
+
+" Keyboard shortcuts
+map <C-c> "+y
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+nnoremap <leader>cfr :let @+=expand("%")<CR>
+nnoremap <leader>cfd :let @+=expand("%:h")<CR>
+nnoremap <leader>cff :let @+=expand("%:t")<CR>
+nnoremap <leader>cfa :let @+=expand("%:p")<CR>
+nnoremap <leader>cfad :let @+=expand("%:p:h")<CR>
+
 
 " Tab, indent, and whitespace settings
 set encoding=utf-8
 set smartindent
 set expandtab
-set listchars=tab:▸\ ,eol:¬
+set showbreak=↪\ 
+set listchars=tab:»\ ,eol:¬,extends:›,precedes:‹,nbsp:␣,trail:•,space:·
 set list!
 set nowrap
 set tabstop=2 shiftwidth=2
@@ -56,5 +74,42 @@ let g:airline#extensions#tabline#enabled=1
 "autocmd vimenter * NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
+" Ctrl-P
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|bower_components\|deps\|_build\|docs\|.*\.meta'
+let g:ctrlp_dont_split = 'NERD_tree_1'
+" let g:ctrlp_abbrev = {
+"     \ 'gmode': 't',
+"     \ 'abbrevs': [
+"         \ {
+"         \ 'pattern': '\(^@.\+\|\\\@<!:.\+\)\@<! ',
+"         \ 'expanded': '_',
+"         \ 'mode': 'pfrz',
+"         \ },
+"         \ ]
+"     \ }
+
+" Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ackprg='ag --vimgrep'
+
+  " Use ag in CtrlP for listing files. Fast and respects .gitignore
+  let g:ctrlp_user_comment = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  " bind \ to grep shortcut
+  "command -nargs=+ -complete=file -bar Ag silent! <args>|cwindow|redraw!
+  cnoreabbrev Ack Ack!
+  nnoremap \ :Ack!<SPACE>
+endif
+
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" Custom mappings for file types to syntax
+au BufNewFile,BufRead *.sls set filetype=yaml
+au BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
+
