@@ -1,6 +1,17 @@
-# holman does dotfiles
+# morinap does holman does dotfiles
 
-Your dotfiles are how you personalize your system. These are mine.
+This project was forked from https://github.com/holman/dotfiles .
+
+Basically, it's a way to source control and manage my configuration for things.
+This makes it easily portable and versionable.  I started with holman's because
+he had a fantastic base with which to start.
+
+See the original project for more details or [read his post on the
+ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
+
+
+# Here be holman's Readme
+
 
 I was a little tired of having long alias files and everything strewn about
 (which is extremely common on other dotfiles projects, too). That led to this
