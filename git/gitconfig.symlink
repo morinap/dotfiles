@@ -17,6 +17,8 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+[merge]
+        tool = kdiff3
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -33,3 +35,7 @@
         default = simple
 [credential]
 	helper = osxkeychain
+[stash]
+        showPatch = 1
+[pager]
+        branch = false
