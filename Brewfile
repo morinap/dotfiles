@@ -19,6 +19,7 @@ brew 'pcre'
 brew 'perl'
 
 # Git helpers
+brew 'git'
 brew 'git-flow'
 cask 'fastlane'
 
