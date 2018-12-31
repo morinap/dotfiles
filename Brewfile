@@ -33,6 +33,7 @@ brew 'haproxy'
 brew 'macvim'
 cask 'kdiff3'
 cask 'ngrok'
+brew 'md5sha1sum'
 
 # Shell utilities
 brew 'the_silver_searcher'
