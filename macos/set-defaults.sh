@@ -20,8 +20,8 @@ defaults write com.apple.Finder FXPreferredViewStyle clmv
 chflags nohidden ~/Library
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Expand save and print panels by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
