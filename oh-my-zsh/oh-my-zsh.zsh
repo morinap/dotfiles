@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Use crunch theme
-ZSH_THEME="amuse"
+ZSH_THEME="morinap"
 
 # Use case sensitive mode
 CASE_SENSITIVE="true"
