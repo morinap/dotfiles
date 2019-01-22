@@ -1,0 +1,65 @@
+#!/bin/sh
+
+set -e
+
+BASE_URL=`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//' -e 's/\.git$//'`
+
+BLOB=false
+BLOB_COMMIT=`git rev-parse HEAD`
+COMMIT_SPECIFIED=false
+MARKDOWN=false
+LINK_TEXT=""
+OPEN=false
+YANK=false
+
+while getopts ":f:c:l:myo" opt; do
+  case ${opt} in
+    f )
+      BLOB=$OPTARG
+      ;;
+    c)
+      BLOB_COMMIT=`git rev-parse $OPTARG`
+      COMMIT_SPECIFIED=true
+      ;;
+    l)
+      LINE_NUM_PARAM="#L$OPTARG"
+      LINE_NUM_TEXT=":$OPTARG"
+      ;;
+    m)
+      MARKDOWN=true
+      ;;
+    o)
+      OPEN=true
+      ;;
+    y)
+      YANK=true
+      ;;
+  esac
+done
+
+#open $BASE_URL
+URL=$BASE_URL
+
+if [ $BLOB != false ]; then
+  URL="$URL/blob/$BLOB_COMMIT/$BLOB$LINE_NUM_PARAM"
+  LINK_TEXT="$BLOB$LINE_NUM_TEXT"
+elif [ $COMMIT_SPECIFIED == true ]; then
+  URL="$URL/commit/$BLOB_COMMIT"
+  LINK_TEXT="$BLOB_COMMIT"
+fi
+
+if [ $MARKDOWN == true ]; then
+  OUTPUT="[$LINK_TEXT]($URL)"
+else
+  OUTPUT=$URL
+fi
+
+if [ $YANK == true ]; then
+  printf $OUTPUT | pbcopy
+fi
+
+if [ $OPEN == true ]; then
+  open $URL
+fi
+
+echo $OUTPUT
