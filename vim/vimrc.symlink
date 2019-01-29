@@ -22,6 +22,7 @@ Plug 'mileszs/ack.vim'                   " Search within vim
 Plug 'airblade/vim-gitgutter'            " Git Gutter
 Plug 'wakatime/vim-wakatime'             " WakaTime
 Plug 'editorconfig/editorconfig-vim'     " Plugin for different syntax settings per-project
+Plug 'w0rp/ale'                          " Plugin for linting
 Plug 'sonph/onehalf', {'rtp': 'vim/'}    " Nice color theme
 call plug#end()
 
