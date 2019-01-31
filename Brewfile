@@ -33,7 +33,6 @@ brew 'haproxy'
 brew 'macvim'
 cask 'kdiff3'
 cask 'ngrok'
-brew 'md5sha1sum'
 brew 'fx'
 
 # Shell utilities
