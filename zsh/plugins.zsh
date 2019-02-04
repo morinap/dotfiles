@@ -1,4 +1,10 @@
-source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. `brew --prefix`/etc/profile.d/z.sh
+if [[ $(command -v brew) ]]; then
+  z_path=`brew --prefix`/etc/profile.d/z.sh
+  if [[ -f $z_path ]]; then
+    . $z_path
+  fi
+fi
 
-eval "$(thefuck --alias)"
+if [[ $(command -v thefuck) ]]; then
+  eval "$(thefuck --alias)"
+fi
