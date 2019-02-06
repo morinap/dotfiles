@@ -1,27 +1,14 @@
-#
-# Max number of characters per line
-#
-Metrics/LineLength:
-  Max: 300
-  Enabled: true
-
+AllCops:
+  TargetRubyVersion: 2.5
 
 Documentation:
   Enabled: false
 
-Style/HashSyntax:
-  SupportedStyles:
-    - 'hash_rockets'
-    - 'ruby19'
-  Enabled: false
+Metrics/LineLength:
+  Max: 300
+  Enabled: true
 
 Metrics/BlockLength:
-  Enabled: false
-
-Style/SymbolArray:
-  Enabled: false
-
-Style/WordArray:
   Enabled: false
 
 Metrics/CyclomaticComplexity:
@@ -45,11 +32,14 @@ Metrics/ClassLength:
 Metrics/AbcSize:
   Enabled: false
 
-Style/GuardClause:
+Style/HashSyntax:
+  SupportedStyles:
+    - 'hash_rockets'
+    - 'ruby19'
   Enabled: false
 
-Style/ClassVars:
+Style/FrozenStringLiteralComment:
   Enabled: false
 
-Style/RegexpLiteral:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
