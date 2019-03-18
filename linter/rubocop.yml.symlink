@@ -43,3 +43,6 @@ Style/FrozenStringLiteralComment:
 
 Layout/EmptyLinesAroundClassBody:
   Enabled: false
+
+Layout/EmptyLinesAroundBlockBody:
+  Enabled: false
