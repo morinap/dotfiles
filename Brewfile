@@ -26,7 +26,6 @@ cask 'fastlane'
 # System Helpers
 brew 'mtr'
 brew 'nmap'
-brew 'postgres-xc'
 
 # Other Utilities
 brew 'haproxy'
