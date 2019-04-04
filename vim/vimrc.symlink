@@ -55,6 +55,8 @@ set number
 set colorcolumn=100
 set ruler
 set visualbell
+set splitright
+set splitbelow
 "set clipboard=unnamed " Enable OS X clipboard integration
 
 " Keyboard shortcuts
