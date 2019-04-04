@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if ! [[ -d ~/.asdf ]]; then
   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.6.3

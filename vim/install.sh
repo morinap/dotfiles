@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 mkdir -p ~/.vim/colors
 curl -fsSL https://raw.githubusercontent.com/vim-scripts/darktango.vim/master/colors/darktango.vim -o ~/.vim/colors/darktango.vim
