@@ -137,3 +137,5 @@ filetype indent plugin on
 au BufNewFile,BufRead *.sls set filetype=yaml
 au BufNewFile,BufRead *.raml set filetype=yaml foldmethod=indent
 
+" EditorConfig.... config
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
