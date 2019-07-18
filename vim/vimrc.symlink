@@ -100,7 +100,7 @@ let g:airline#extensions#tabline#enabled=1
 map <C-n> :NERDTreeToggle<CR>
 
 " Ctrl-P
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|bower_components\|deps\|_build\|docs\|.*\.meta'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|tmp\|bower_components\|deps\|_build\|docs\|.*\.meta\|packrat/\|log/'
 let g:ctrlp_dont_split = 'NERD_tree_1'
 " let g:ctrlp_abbrev = {
 "     \ 'gmode': 't',
