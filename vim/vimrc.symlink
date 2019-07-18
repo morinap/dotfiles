@@ -24,6 +24,7 @@ Plug 'wakatime/vim-wakatime'             " WakaTime
 Plug 'editorconfig/editorconfig-vim'     " Plugin for different syntax settings per-project
 Plug 'w0rp/ale'                          " Plugin for linting
 Plug 'sonph/onehalf', {'rtp': 'vim/'}    " Nice color theme
+Plug 'andymass/vim-matchup'              " Better curly braace matching
 call plug#end()
 
 " Color scheme settings
@@ -69,7 +70,7 @@ nnoremap <leader>cfd :let @+=expand("%:h")<CR>
 nnoremap <leader>cff :let @+=expand("%:t")<CR>
 nnoremap <leader>cfa :let @+=expand("%:p")<CR>
 nnoremap <leader>cfad :let @+=expand("%:p:h")<CR>
-
+nnoremap <c-k> :<c-u>MatchupWhereAmI?<cr>
 
 " Tab, indent, and whitespace settings
 set encoding=utf-8
