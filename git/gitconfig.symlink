@@ -16,7 +16,7 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = mvim -f +startinsert
+        editor = vim -f +startinsert
 [merge]
         tool = kdiff3
 [apply]
