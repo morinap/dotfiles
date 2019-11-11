@@ -72,6 +72,13 @@ nnoremap <leader>cfa :let @+=expand("%:p")<CR>
 nnoremap <leader>cfad :let @+=expand("%:p:h")<CR>
 nnoremap <c-k> :<c-u>MatchupWhereAmI?<cr>
 
+" Pane navigation
+" Do this in a VimEnter to squash what gvimrc has
+nnoremap <MD-Left> :wincmd h<CR>
+nnoremap <MD-Right> :wincmd l<CR>
+nnoremap <MD-Up> :wincmd k<CR>
+nnoremap <MD-Down> :wincmd j<CR>
+
 " Tab, indent, and whitespace settings
 set encoding=utf-8
 set smartindent
