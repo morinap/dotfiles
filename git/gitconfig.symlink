@@ -39,3 +39,9 @@
         showPatch = 1
 [pager]
         branch = false
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
+[tag]
+	forceSignAnnotated = true
