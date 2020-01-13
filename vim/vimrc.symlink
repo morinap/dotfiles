@@ -24,7 +24,8 @@ Plug 'wakatime/vim-wakatime'             " WakaTime
 Plug 'editorconfig/editorconfig-vim'     " Plugin for different syntax settings per-project
 Plug 'w0rp/ale'                          " Plugin for linting
 Plug 'sonph/onehalf', {'rtp': 'vim/'}    " Nice color theme
-Plug 'andymass/vim-matchup'              " Better curly braace matching
+Plug 'andymass/vim-matchup'              " Better curly brace matching
+Plug 'elixir-editors/vim-elixir'         " Vim elixr syntax
 call plug#end()
 
 " Color scheme settings
